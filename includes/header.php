@@ -30,7 +30,7 @@
 
     <div class="top_bar">
       <div class="logo">
-        <img src="assets/images/logo.png"> //in case of image logo
+        <img src="assets/images/logo.png">
         <a href="index.php">ClgFeed</a>
       </div>
 
