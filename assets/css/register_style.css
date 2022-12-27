@@ -21,6 +21,11 @@ body {
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #3498db;
+}
+
 .wrapper {
     background-image: url("../images/backgrounds/desktop.jpg");
     background-size: 100%;
@@ -61,4 +66,34 @@ body {
     color: #2C6C96;
     text-shadow: #73B6E2  0.5px 0.5px 0px;
     font-size: 250%;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    margin: 5px 0 10px 0;
+    color: #2C6C96;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    font-family: 'Bellota-BoldItalic', sans-serif;
+    font-size: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    border: 1px solid #e5e5e5;
+    margin-top: 5px;
+    width: 70%;
+    height: 35px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+    border-color: #3498db;
+
+}
+
+#second{
+    display: none;
 }
