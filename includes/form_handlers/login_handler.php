@@ -2,12 +2,12 @@
 
 if(isset($_POST['login_button'])) { // if login button is clicked
 
-  $email = filter_var($_POST['log_email'], FILTER_SANITIZE_EMAIL); //sanstize email
+  $email = filter_var($_POST['log_email'], FILTER_SANITIZE_EMAIL); //sanitize email
 
   $_SESSION['log_email'] = $email; //stores email into session variable
   $password = md5($_POST['log_password']); //gets password
 
-  $check_database_query = mysqli_query($con, "SELECT * FROM users WHERE email='$email' AND password='$password'"); //checks if username adn paswword exist
+  $check_database_query = mysqli_query($con, "SELECT * FROM users WHERE email='$email' AND password='$password'"); //checks if username adn password exist
   $check_login_query = mysqli_num_rows($check_database_query); // either equal to 1(if username and password exist) or 0
 
   if($check_login_query == 1) {
@@ -30,4 +30,4 @@ if(isset($_POST['login_button'])) { // if login button is clicked
 
 }
 
- ?>
+?>
