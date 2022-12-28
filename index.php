@@ -1,17 +1,6 @@
 <?php
-
- require 'config/config.php';
-
-?>
-
-
-<html>
-<head>
-    <title>
-
-    </title>
-</head>
-<body>
+  include("includes/header.php");
+ ?>
     hlooo kavs!
 </body>
 </html>
