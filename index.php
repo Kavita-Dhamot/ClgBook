@@ -7,6 +7,7 @@ include("includes/classes/Post.php");
 if(isset($_POST['post'])){      //if post button is clicked
 	$post = new Post($con, $userLoggedIn);
 	$post->submitPost($_POST['post_text'], 'none');
+	header("Location: index.php");									//removes the form resubmission button on refresh
 }
 
 

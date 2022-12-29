@@ -13,6 +13,11 @@ class Post {
 	public function submitPost($body, $user_to) {
 		$body = strip_tags($body); //removes html tags
 		$body = mysqli_real_escape_string($this->con, $body);  //escapes any special characters
+
+		// lets user post with line breaks
+		$body = str_replace('\r\n' , '\n' , $body);
+		$body = nl2br($body); 															// replaces new line with line break;
+
 		$check_empty = preg_replace('/\s+/', '', $body); //Deltes all spaces
 
 		if($check_empty != "") {        //if there is text

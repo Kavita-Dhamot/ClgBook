@@ -53,6 +53,9 @@
         <a href="#">
           <i class="fa-solid fa-gear"></i>
         </a>
+        <a href="includes/handlers/logout.php">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
       </nav>
 
     </div>
