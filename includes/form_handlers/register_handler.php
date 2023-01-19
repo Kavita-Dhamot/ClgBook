@@ -103,9 +103,10 @@ if(isset($_POST['register_button'])) {
 
         $i = 0;
         //if username exists add i to username
+        $initial_username = $username;
         while(mysqli_num_rows($check_username_query) != 0) {
             $i++;
-            $username = $username . "_" . $i;
+            $username = $initial_username . "_" . $i;
             $check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
         }
 
