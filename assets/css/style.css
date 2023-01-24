@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'Bellota-LightItalic';
-    src: url('../fonts/Bellota-LightItalic.otf');
-}
-@font-face {
-    font-family: 'Bellota-BoldItalic';
-    src: url('../fonts/Bellota-BoldItalic.otf');
+  font-family: 'Bellota-LightItalic';
+  src: url('../fonts/Bellota-LightItalic.otf');
 }
 
-body{
+@font-face {
+  font-family: 'Bellota-BoldItalic';
+  src: url('../fonts/Bellota-BoldItalic.otf');
+}
+
+body {
   line-height: 17px;
   background-color: #E6EAE8;
 }
@@ -17,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-.top_bar{
+.top_bar {
   width: 100%;
   min-width: 1050px;
   height: 40px;
@@ -29,9 +30,10 @@ a {
   z-index: 10;
 }
 
-.logo a{
+.logo a {
   font-family: 'Bellota-BoldItalic', sans-serrif;
-  margin-right: 0px; /* if we add logo image */
+  margin-right: 0px;
+  /* if we add logo image */
   margin-left: 10px;
   font-size: 30;
   position: relative;
@@ -42,11 +44,11 @@ a {
 }
 
 /* this is for logo image if we want to */
-.logo img{
+.logo img {
   width: 35px;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
@@ -57,7 +59,7 @@ nav {
   margin: 10px;
 }
 
-nav a{
+nav a {
   position: relative;
   color: #fff;
   text-decoration: none;
@@ -73,40 +75,36 @@ nav a:hover {
   margin: 0 auto;
   top: 50px;
   position: relative;
-  padding:  0 10px;
+  padding: 0 10px;
   width: 75%;
   min-width: 950px;
 }
 
 .column {
   background-color: #fff;
-    padding: 10px;
-    border: 1px solid #D3D3D3;
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px #d3d3d3;
-    z-index: -1;
+  padding: 10px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #D3D3D3;
+  z-index: -1;
 }
 
 .user_details {
   width: 250px;
   float: left;
-  margin-botton: 20px;
+  margin-bottom: 20px;
+}
+
+.user_details img {
+  height: 120px;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 .user_details_left_right {
-  width: 125px;
-  display: inline-block;
+  width: 120px;
+  display: inline-table;
   position: absolute;
-}
-
-.user_details_left_right a{
-  text-decoration: none;
-}
-
-.user_details img{
-  height: 125px;
-  border-radius: 5px;
-  margin-right: 5px;
 }
 
 .main_column {
@@ -125,7 +123,7 @@ nav a:hover {
   height: 60px;
   border-radius: 3px;
   margin-right: 5px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #D3D3D3;
   font-size: 12px;
   padding: 5px;
 }
@@ -140,7 +138,7 @@ textarea:focus {
   border: none;
   border-radius: 3px;
   background-color: #3498db;
-  font-family: 'Bellota-BoldItalic', sans-serrif;
+  font-family: 'Bellota-BoldItalic', sans-serif;
   color: #1E75CA;
   text-shadow: #73B6E2 0.5px 0.5px 0px;
   font-size: 90%;
@@ -166,14 +164,13 @@ textarea:focus {
   margin-right: 7px;
 }
 
-.post_profile_pic img{
+.post_profile_pic img {
   border-radius: 5px;
 }
 
 #comment_iframe {
   max-height: 250px;
   width: 100%;
-  border-radius: 3px;
   margin-top: 5px;
 }
 
@@ -205,25 +202,25 @@ textarea:focus {
   height: 35px;
   margin-top: 3px;
   position: absolute;
-  font-family: 'Bellota-BoldItalic', sans-serrif;
+  font-family: 'Bellota-BoldItalic', sans-serif;
   text-shadow: #73B6E2 0.5px 0.5px 0px;
 }
 
-.newsFeedPostOptions {
+.newsfeedPostOptions {
   padding: 0px;
   text-decoration: none;
   color: #20AAE5;
   border: none;
 }
 
-.newsFeedPostOptions iframe {
+.newsfeedPostOptions iframe {
   border: 0px;
   height: 17px;
   width: 120px;
 }
 
 .comment_like {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   font-size: 14px;
   color: #3498db;
@@ -236,4 +233,71 @@ textarea:focus {
 .like_value {
   display: inline;
   font-size: 14px;
+}
+
+.profile_left {
+  top: -10px;
+  width: 17%;
+  max-width: 240px;
+  min-width: 130px;
+  height: 100%;
+  float: left;
+  position: relative;
+  background-color: #37B0E9;
+  border-right: 10px solid #83D6FE;
+  color: #CBEAF8;
+  margin-right: 20px;
+}
+
+.profile_left img {
+  min-width: 80px;
+  width: 55%;
+  margin: 20px;
+  border: 5px solid #83D6FE;
+  border-radius: 100px;
+}
+
+.profile_info {
+  display: list-item;
+  background-color: #2980b9;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.profile_info p {
+  margin: 0 0 0 20px;
+  word-wrap: break-word;
+}
+
+.danger {
+  background-color: #e74c3c;
+}
+
+.warning {
+  background-color: #f0ad4e;
+}
+
+.default {
+  background-color: #bdc3c7;
+}
+
+.success {
+  background-color: #2ecc71;
+}
+
+.info {
+  background-color: #3498db;
+}
+
+.deep_blue {
+  background-color: #0043f0;
+}
+
+.profile_left input[type="submit"] {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  margin: 7px 0 0 7px;
+  border: none;
+  color: #fff;
 }
