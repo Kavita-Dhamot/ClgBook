@@ -1,5 +1,7 @@
 <?php
  require 'config/config.php';
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
 
  if(isset($_SESSION['username'])){               //checks if the user is loggen in, as in register.php we set the username variable once the user logs in
    $userLoggedIn = $_SESSION['username'];       // variable stores the username of the user that is currently logged in
@@ -47,7 +49,7 @@
         <a href="#">
           <i class="fa-solid fa-bell"></i>
         </a>
-        <a href="#">
+        <a href="requests.php">
           <i class="fa-solid fa-users"></i>
         </a>
         <a href="#">

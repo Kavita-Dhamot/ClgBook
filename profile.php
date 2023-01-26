@@ -1,7 +1,5 @@
 <?php 
 include("includes/header.php");
-include("includes/classes/User.php");
-include("includes/classes/Post.php");
 
 
 if(isset($_GET['profile_username'])) {
@@ -70,26 +68,17 @@ if(isset($_POST['respond_request'])) {
  					echo '<input type="submit" name="add_friend" class="success" value="Add Friend"><br>';
 
  			}
-
-
-
+			
  			?>
-
 
  		</form>
 
  	</div>
 
-
 	<div class="main_column column">
 		<?php echo $username; ?>
 		
-
-
 	</div>
-
-
-
 
 	</div>
 </body>
