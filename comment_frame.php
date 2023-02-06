@@ -3,14 +3,14 @@
  include("includes/classes/User.php");
  include("includes/classes/Post.php");
 
- if(isset($_SESSION['username'])){               //checks if the user is loggen in, as in register.php we set the username variable once the user logs in
+ if(isset($_SESSION['username'])){               //checks if the user is login in, as in register.php we set the username variable once the user logs in
    $userLoggedIn = $_SESSION['username'];       // variable stores the username of the user that is currently logged in
    $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$userLoggedIn'"); //gets info about users
    $user = mysqli_fetch_array($user_details_query); // makes array of all info about the user
 
  }
  else{                                          //user is not logged in
-   header("Location: register.php");            //as the user is not logged in it sends the user back to the registeration page
+   header("Location: register.php");            //as the user is not logged in it sends the user back to the registration page
  }
 ?>
 
