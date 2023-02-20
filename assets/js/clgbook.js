@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#submit_profile_post').click(function(){
 
         $.ajax({
-            type: "POST", 
+            type: "POST",
             url: "includes/handlers/ajax_submit_profile_post.php",
             data: $('form.profile_post').serialize(),
             success: function(msg) {
@@ -19,3 +19,9 @@ $(document).ready(function() {
     });
 
 });
+
+function getUsers(value, user) {
+	$.post("includes/handlers/ajax_friend_search.php", {query:value, userLoggedIn:user}, function(data) {
+		$(".results").html(data);
+	});
+}

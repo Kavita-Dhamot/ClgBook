@@ -4,10 +4,18 @@ class User {
 	private $con;
 
 	public function __construct($con, $user){
-		$this->con = $con;
-		$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$user'");
-		$this->user = mysqli_fetch_array($user_details_query);
-	}
+    if($user == null) {
+        exit("user variable is null");
+    }
+
+    $this->con = $con;
+    $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$user'");
+    $this->user = mysqli_fetch_array($user_details_query);
+
+    if($this->user == null) {
+        exit("No user exists with the username '$user'");
+    }
+}
 
 	public function getUsername() {
 		return $this->user['username'];
@@ -92,11 +100,11 @@ class User {
 
 		$new_friend_array = str_replace($user_to_remove . ",", "", $this->user['friend_array']);
 		$remove_friend = mysqli_query($this->con, "UPDATE users SET friend_array= '$new_friend_array' WHERE username='$logged_in_user'");
-		
+
 		$new_friend_array = str_replace($this->user['username'] . ",", "", $friend_array_username);
 		$remove_friend = mysqli_query($this->con, "UPDATE users SET friend_array= '$new_friend_array' WHERE username='$user_to_remove'");
 
-		  
+
 	}
 
 	public function sendRequest($user_to){
