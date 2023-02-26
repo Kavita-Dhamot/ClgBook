@@ -62,8 +62,6 @@ if(isset($_POST['post_message'])) {
 		}
 		?>
 
-
-
 		<div class="message_post">
 			<form action="" method="POST">
 				<?php
