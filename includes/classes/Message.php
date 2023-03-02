@@ -173,7 +173,7 @@ class Message {
 	}
 
 	public function getConvosDropdown($data, $limit) {
-		
+
 		$page = $data['page'];
 		$userLoggedIn = $this->user_obj->getUsername();
 		$return_string = "";
@@ -226,7 +226,7 @@ class Message {
 			$split = str_split($latest_message_details[1], 12);
 			$split = $split[0] . $dots;
 
-			$return_string .= "<a href='messages.php?u=$username_temp' > 
+			$return_string .= "<a href='messages.php?u=$username_temp' >
 								<div class='user_found_messages' style='" . $style . "'>
 								<img src='" . $user_found_obj->getProfilePic() . "' style='border-radius: 5px; margin-right: 5px;'>
 								" . $user_found_obj->getFirstAndLastName() . "
@@ -236,12 +236,12 @@ class Message {
 								</a>";
 		}
 
-		//if post were loaded 
+		//if post were loaded
 		if($count > $limit)
 			$return_string .= "<input type='hidden' class='noMoreDropdownData' value='" . ($page + 1) ."'><input type='hidden' class='noMoreDropdownData' value='false'>";
 
 
-		else	
+		else
 			$return_string .= "<input type='hidden' class='nextPageDropdownData' value='true'> <p style='text-align: center;'>No more messages to load!</p>";
 
 
@@ -251,7 +251,7 @@ class Message {
 		$userLoggedIn = $this->user_obj->getUsername();
 		$query = mysqli_query($this->con, "SELECT * FROM messages WHERE viewed='no' AND user_to='$userLoggedIn'");
 		return mysqli_num_rows($query);
-	} 
+	}
 }
 
 ?>
