@@ -131,3 +131,8 @@
     left: 8px;
     top: -5px;
 }
+
+.resultDisplayNotification {
+    height: auto;
+    color: #1485BD;
+}
