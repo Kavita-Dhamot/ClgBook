@@ -37,7 +37,7 @@ class Notification {
 		$query = mysqli_query($this->con, "SELECT * FROM notifications WHERE user_to='$userLoggedIn' ORDER BY id DESC");
 
         if(mysqli_num_rows($query) == 0) {
-            echo "You have no notifications1";
+            echo "You have no notifications!";
         }
 		$num_iterations =0;  //number of messages checked
 		$count=1;  //number of messages posted
