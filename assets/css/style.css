@@ -485,6 +485,7 @@ textarea:focus {
 }
 
 .searchPageFriendButtons input[type="submit"] {
+
     border: none;
     padding: 7px 12px;
     border-radius: 5px;
@@ -498,6 +499,7 @@ textarea:focus {
 
 #search_hr {
   margin-bottom: 0px;
+
 }
 .small_profile_pic {
     height: 55px;
@@ -521,3 +523,4 @@ textarea:focus {
     border-radius: 5px;
     color: #fff;
 }
+

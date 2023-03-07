@@ -71,6 +71,9 @@ include("includes/classes/Notification.php");
 
       <nav>
         <?php
+
+        //Unread messages
+
         $messages = new Message($con, $userLoggedIn);
         $num_messages = $messages->getUnreadNumber();
 
