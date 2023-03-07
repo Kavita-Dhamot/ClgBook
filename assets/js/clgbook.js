@@ -48,7 +48,7 @@ $(document).click(function(e){
         $(".dropdown_data_window").html("");
         $(".dropdown_data_window").css({"padding": "0px", "height" :"0px"});
 
-        
+
     }
 });
 
@@ -114,3 +114,4 @@ function getLiveSearchUsers(value, user){
         }
     });
 }
+

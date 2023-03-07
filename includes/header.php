@@ -71,7 +71,9 @@ include("includes/classes/Notification.php");
 
       <nav>
         <?php
+
         //Unread messages
+
         $messages = new Message($con, $userLoggedIn);
         $num_messages = $messages->getUnreadNumber();
 
@@ -112,7 +114,10 @@ include("includes/classes/Notification.php");
           echo '<span class="notification_badge" id="unread_requests">' . $num_requests . '</span>';
           ?>
         </a>
-        <a href="upload.php">
+        <!-- <a href="upload.php">
+          <i class="fa-solid fa-gear"></i>
+        </a> -->
+        <a href="settings.php">
           <i class="fa-solid fa-gear"></i>
         </a>
         <a href="includes/handlers/logout.php">
